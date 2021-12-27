@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.spagetik.bankmod.mixins",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "JoinServerMixin",
+    "NetheriteIngotMixin",
+    "PlayerToPlayerPay",
+    "WButtonClickMixin",
+    "WrittenBookUseOnBlock"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

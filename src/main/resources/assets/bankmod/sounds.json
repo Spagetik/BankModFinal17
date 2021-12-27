@@ -1,0 +1,20 @@
+{
+  "enter_pin" : {
+    "subtitle": "bankmod.enter_pin",
+    "sounds": [
+      "bankmod:enter_pin"
+    ]
+  },
+  "atm_click": {
+    "subtitle": "bankmod.atm_click",
+    "sounds": [
+      "bankmod:atm_click"
+    ]
+  },
+  "exit_atm": {
+    "subtitle": "bankmod.exit_atm",
+    "sounds": [
+      "bankmod:exit_atm"
+    ]
+  }
+}
