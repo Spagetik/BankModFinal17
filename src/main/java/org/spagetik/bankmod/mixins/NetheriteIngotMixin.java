@@ -24,12 +24,15 @@ public abstract class NetheriteIngotMixin {
         ItemStack itemStackInHand = user.getStackInHand(hand);
         if (itemStackInHand.getItem().equals(Bankmod.PHONE_ITEM)) {
             if (itemStackInHand.getName().asString().contains(Bankmod.PHONE_NAME)) {
-                if (world.isClient) {
-                    Bankmod.WORLD = world;
-                    Bankmod.PLAYER = user;
-                    GuiScreen.clickSound = null;
-                    GuiScreen.exitBttnSound = null;
-                    GuiScreen.setScreen(new PhoneWelcomeGui());
+                System.out.println(Bankmod.ON_SPK);
+                if (Bankmod.ON_SPK) {
+                    if (world.isClient) {
+                        Bankmod.WORLD = world;
+                        Bankmod.PLAYER = user;
+                        GuiScreen.clickSound = null;
+                        GuiScreen.exitBttnSound = null;
+                        GuiScreen.setScreen(new PhoneWelcomeGui());
+                    }
                 }
             }
         }

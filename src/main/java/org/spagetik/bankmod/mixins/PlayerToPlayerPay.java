@@ -42,12 +42,14 @@ public abstract class PlayerToPlayerPay {
             if (entity.world.isClient()) {
                 if (entity instanceof PlayerEntity) {
                     if(MinecraftClient.getInstance().options.keySneak.isPressed()) {
-                        PlayerEntity player = (PlayerEntity) entity;
-                        UUID playerUuid = player.getUuid();
-                        Bankmod.WORLD = entity.world;
-                        Bankmod.PLAYER = this.inventory.player;
-                        System.out.println(playerUuid);
-                        GuiScreen.setScreen(new PlayerSendMoneyGui(player));
+                        if (Bankmod.ON_SPK) {
+                            PlayerEntity player = (PlayerEntity) entity;
+                            UUID playerUuid = player.getUuid();
+                            Bankmod.WORLD = entity.world;
+                            Bankmod.PLAYER = this.inventory.player;
+                            System.out.println(playerUuid);
+                            GuiScreen.setScreen(new PlayerSendMoneyGui(player));
+                        }
                     }
                 }
             }

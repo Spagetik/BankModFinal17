@@ -15,8 +15,7 @@ import java.util.List;
 public class Bankmod implements ModInitializer {
 
     public static final Item CARD_ITEM = Items.WRITTEN_BOOK;
-    public static final Item PHONE_ITEM = Items.NETHERITE_INGOT;
-    public static final Item PAYPLAYER_ITEM = Items.PAPER;
+    public static final Item PHONE_ITEM = Items.IRON_INGOT;
     public static final String PHONE_NAME = "sPhone";
     public static final String BANK_NAME = "SPragueBank Inc.";
     public static final String CURRENCY = "АР";
@@ -32,6 +31,7 @@ public class Bankmod implements ModInitializer {
     public static BlockPos CURRENT_ATM_POS;
     public static ModConfig CONFIG;
     public static String CLIENT_UUID;
+    public static boolean ON_SPK;
 
 
     @Override
@@ -40,6 +40,7 @@ public class Bankmod implements ModInitializer {
         ModSounds.registerSounds();
         CONFIG = new ModConfig().registerConfigs();
         updateConfigs();
+        ON_SPK = false;
     }
 
     public static void updateConfigs() {
