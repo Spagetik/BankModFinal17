@@ -1,6 +1,7 @@
 package org.spagetik.bankmod;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
@@ -203,5 +204,12 @@ public class BankApi {
         data.put("toISPB", toCard);
         data.put("amount", amount);
         return sendPostRequest(data, "sendMoneyFromAccountToCard");
+    }
+
+    public static HashMap<String, Object> sendFromPlayerToPlayer(PlayerEntity player, String amount) {
+        HashMap<String, String> data = new HashMap<>();
+        data.put("toUuid", player.getUuidAsString().replace("-", ""));
+        data.put("amount", amount);
+        return sendPostRequest(data, "sendFromPlayerToPlayer");
     }
 }

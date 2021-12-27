@@ -1,7 +1,6 @@
 package org.spagetik.bankmod;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
